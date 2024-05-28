@@ -8,4 +8,6 @@
     <string name="txt_digite_seu_email">Digite seu e-mail</string>
     <string name="txt_senha">Senha</string>
     <string name="txt_digite_sua_senha">Digite sua senha</string>
+    <string name="txt_recuperar_conta">Recuperar Conta</string>
+    <string name="txt_recuperar_senha">Por favor, insira o endereço de e-mail associado à sua conta abaixo. Enviaremos um link de redefinição de senha para o seu e-mail.</string>
 </resources>

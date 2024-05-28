@@ -57,6 +57,7 @@
             android:padding="16dp" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -73,6 +74,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/btn_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -81,11 +83,12 @@
                 android:textColor="@color/white" />
 
             <TextView
+                android:id="@+id/btn_recover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/open_sans_semibold"
-                android:text="Recuperar Senha"
+                android:text="Recuperar conta"
                 android:textAlignment="textEnd"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -95,7 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:indeterminateTint="@color/white" />
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
