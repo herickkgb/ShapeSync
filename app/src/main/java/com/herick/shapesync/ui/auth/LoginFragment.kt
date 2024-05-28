@@ -1,4 +1,4 @@
-package com.herick.shapesync.ui
+package com.herick.shapesync.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.herick.shapesync.R
+import com.herick.shapesync.databinding.FragmentLoginBinding
 import com.herick.shapesync.databinding.FragmentRegisterBinding
-import com.herick.shapesync.databinding.FragmentSplashBinding
 
-class SplashFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private var _binding: FragmentSplashBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class SplashFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSplashBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
 

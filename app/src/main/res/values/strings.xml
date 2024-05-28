@@ -2,4 +2,10 @@
     <string name="app_name">ShapeSync</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descrição_imagem">Imagem splashArt</string>
+    <string name="Name_app">ShapeSync</string>
+    <string name="txt_email">E-mail</string>
+    <string name="txt_digite_seu_email">Digite seu e-mail</string>
+    <string name="txt_senha">Senha</string>
+    <string name="txt_digite_sua_senha">Digite sua senha</string>
 </resources>
