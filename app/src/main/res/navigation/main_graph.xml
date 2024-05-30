@@ -39,15 +39,24 @@
             <action
                 android:id="@+id/action_loginFragment_to_registerFragment"
                 app:destination="@id/registerFragment" />
-            <action
-                android:id="@+id/action_global_homeFragment"
-                app:destination="@id/homeFragment2" />
         </fragment>
+        <action
+            android:id="@+id/action_global_homeFragment"
+            app:destination="@id/homeFragment" />
 
     </navigation>
     <fragment
-        android:id="@+id/homeFragment2"
+        android:id="@+id/homeFragment"
         android:name="com.herick.shapesync.ui.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment2"
+            app:destination="@id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.herick.shapesync.ui.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" />
 </navigation>

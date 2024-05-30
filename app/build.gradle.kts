@@ -54,4 +54,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    //imageCircle
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //picasso
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
 }

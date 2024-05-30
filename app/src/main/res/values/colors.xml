@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_default">#FF6F61</color>
+
+    <!-- Adicione suas cores padrão do aplicativo aqui -->
+    <color name="cor_primaria">#FFFFFFFF</color>
+    <color name="checkbox_text_color">#FFFFFFFF</color>
 </resources>
