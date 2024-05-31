@@ -12,9 +12,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/color_default">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="4dp"
+                app:navigationIcon="@drawable/ic_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Criar conta"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textSize="16dp" />
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -29,20 +48,19 @@
 
             <TextView
                 android:layout_width="wrap_content"
-
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="@string/txt_email"
                 android:textColor="@color/white" />
 
             <EditText
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/open_sans_semibold"
-                android:hint="@string/txt_digite_seu_email"
-                android:padding="16dp" />
+                style="@style/EditTextTheme"
+                android:hint="@string/txt_digite_seu_email" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,35 +68,31 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:inputType="textEmailAddress"
-
+                android:textSize="16dp"
                 android:text="@string/txt_senha"
                 android:textColor="@color/white" />
 
             <EditText
+                android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"
-
-                android:fontFamily="@font/open_sans_semibold"
+                style="@style/EditTextTheme"
                 android:hint="@string/txt_digite_sua_senha"
-                android:inputType="textPassword"
-                android:padding="16dp" />
+                android:inputType="textPassword" />
 
             <Button
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_btn"
-                android:fontFamily="@font/open_sans_semibold"
-                android:text="Criar conta"
-                android:textColor="@color/color_default"
-                android:textSize="20sp"
+                style="@style/ButtomTheme"
+                android:text="@string/text_button_register_login_fragment"
                 app:backgroundTint="@null" />
 
 
             <ProgressBar
-                android:id="@+id/progress_circular"
+                android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone"

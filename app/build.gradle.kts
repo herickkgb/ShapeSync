@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
+    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.firebase.crashlytics)
+
 }
 
 android {
@@ -50,6 +54,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
+
     //test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -61,5 +66,16 @@ dependencies {
 
     //picasso
     implementation ("com.squareup.picasso:picasso:2.71828")
+
+    //firebase
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.database)
+
+
 
 }

@@ -15,6 +15,11 @@
             app:destination="@id/authentication"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <navigation android:id="@+id/authentication"
         app:startDestination="@id/loginFragment">
@@ -42,7 +47,9 @@
         </fragment>
         <action
             android:id="@+id/action_global_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
 
     </navigation>
     <fragment
@@ -53,10 +60,22 @@
         <action
             android:id="@+id/action_homeFragment_to_formFragment2"
             app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_authentication"
+            app:destination="@id/authentication" />
     </fragment>
     <fragment
         android:id="@+id/formFragment"
         android:name="com.herick.shapesync.ui.FormFragment"
         android:label="fragment_form"
         tools:layout="@layout/fragment_form" />
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.herick.shapesync.ui.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+        <action
+            android:id="@+id/action_todoFragment_to_formFragment2"
+            app:destination="@id/formFragment" />
+    </fragment>
 </navigation>

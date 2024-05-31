@@ -20,25 +20,25 @@
 
         <TextView
             android:layout_width="wrap_content"
-
+            android:textSize="16dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans_semibold"
             android:text="@string/txt_email"
             android:textColor="@color/white" />
 
         <EditText
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"
-            android:fontFamily="@font/open_sans_semibold"
             android:hint="@string/txt_digite_seu_email"
-            android:padding="16dp" />
+            style="@style/EditTextTheme" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textSize="16dp"
             android:fontFamily="@font/open_sans_semibold"
             android:inputType="textEmailAddress"
 
@@ -46,24 +46,21 @@
             android:textColor="@color/white" />
 
         <EditText
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"
-
-            android:fontFamily="@font/open_sans_semibold"
             android:hint="@string/txt_digite_sua_senha"
-            android:inputType="textPassword"
-            android:padding="16dp" />
+            style="@style/EditTextTheme"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_btn"
-            android:fontFamily="@font/open_sans_semibold"
-            android:text="Login"
+            style="@style/ButtomTheme"
+            android:text="@string/text_title_login_fragment"
             android:textColor="@color/color_default"
             android:textSize="20sp"
             app:backgroundTint="@null" />
@@ -78,8 +75,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="16dp"
+                android:padding="5dp"
                 android:fontFamily="@font/open_sans_semibold"
-                android:text="Criar Conta"
+                android:text="@string/text_button_register_login_fragment"
                 android:textColor="@color/white" />
 
             <TextView
@@ -87,14 +86,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:padding="5dp"
                 android:fontFamily="@font/open_sans_semibold"
-                android:text="Recuperar conta"
+                android:text="@string/text_button_recover_login_fragment"
+                android:textSize="16dp"
                 android:textAlignment="textEnd"
                 android:textColor="@color/white" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progress_circular"
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

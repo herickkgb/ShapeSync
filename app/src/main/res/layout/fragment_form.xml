@@ -7,187 +7,238 @@
     android:fillViewport="true"
     tools:context=".ui.FormFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="229dp">
+       <com.google.android.material.appbar.AppBarLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/color_default">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_semibold"
-                android:text="Nome do treinamento"
-                android:textColor="@color/white"
-                android:textSize="16dp" />
+           <com.google.android.material.appbar.MaterialToolbar
+               android:id="@+id/toolbar"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:elevation="4dp"
+               app:navigationIcon="@drawable/ic_back">
 
-            <EditText
-                android:id="@+id/nome_treinamento"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/open_sans_semibold"
-                android:hint="@string/txt_ex_treinamento_abd"
-                android:inputType="textAutoComplete"
-                android:padding="10dp" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:text="Novo treinamento"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:textSize="16dp" />
+           </com.google.android.material.appbar.MaterialToolbar>
+       </com.google.android.material.appbar.AppBarLayout>
 
-            <View
-                android:layout_width="100dp"
-                android:layout_height="2dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="5dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp" />
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
 
+           <LinearLayout
+               android:id="@+id/linearLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="20dp"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_semibold"
-                android:paddingTop="10dp"
-                android:text="Tipo do treinamento"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:text="Nome do treinamento:"
+                   android:textColor="@color/white"
+                   android:textSize="16dp" />
 
-            <LinearLayout
-                android:id="@+id/linearCheckBotton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+               <EditText
+                   android:id="@+id/nome_treinamento"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="4dp"
+                   style="@style/EditTextTheme"
+                   android:hint="@string/txt_ex_treinamento_abd"
+                   android:inputType="textAutoComplete"
+                   android:padding="10dp" />
 
-            </LinearLayout>
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="2dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="5dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_semibold"
-                android:paddingTop="10dp"
-                android:text="Descrição"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/descricao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/open_sans_semibold"
-                android:hint="Fazer 50 flexões a cada 5 Minutos"
-                android:inputType="textMultiLine"
-                android:padding="10dp" />
-
-            <View
-                android:layout_width="100dp"
-                android:layout_height="2dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="5dp"
-                android:background="#FFFFFF"
-                android:elevation="4dp" />
+               <View
+                   android:layout_width="100dp"
+                   android:layout_height="2dp"
+                   android:layout_marginHorizontal="16dp"
+                   android:layout_marginTop="5dp"
+                   android:background="#FFFFFF"
+                   android:elevation="4dp" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans_semibold"
-                android:paddingTop="10dp"
-                android:text="Status Exercício"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:paddingTop="10dp"
+                   android:text="Tipo do treinamento:"
+                   android:textColor="@color/white"
+                   android:textSize="16sp" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
+               <LinearLayout
+                   android:id="@+id/linearCheckBotton"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/rd_Todo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="10dp"
-                    android:textAlignment="center"
-                    android:text="@string/status_task_todo"
-                    android:background="@drawable/radio_button_selector"
-                    android:button="@android:color/transparent"
-                    android:textColor="@drawable/radio_text_selector"
-                    android:textSize="20sp" />
+               </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/rd_Doing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/status_task_doing"
-                    android:background="@drawable/radio_button_selector"
-                    android:button="@android:color/transparent"
-                    android:textColor="@drawable/radio_text_selector"
-                    android:textSize="20sp"/>
+               <View
+                   android:layout_width="100dp"
+                   android:layout_height="2dp"
+                   android:layout_marginHorizontal="16dp"
+                   android:layout_marginTop="5dp"
+                   android:background="#FFFFFF"
+                   android:elevation="4dp" />
 
-                <RadioButton
-                    android:id="@+id/rd_Done"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:text="@string/status_task_done"
-                    android:background="@drawable/radio_button_selector"
-                    android:button="@android:color/transparent"
-                    android:textColor="@drawable/radio_text_selector"
-                    android:textSize="20sp" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:paddingTop="10dp"
+                   android:text="@string/descricao_empty_register_fragment"
+                   android:textColor="@color/white"
+                   android:textSize="16sp" />
+               <EditText
+                   android:id="@+id/descricao"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="4dp"
+                   style="@style/EditTextTheme"
+                   android:hint="Fazer 50 flexões a cada 5 Minutos"
+                   android:inputType="textMultiLine"
+                   android:padding="10dp" />
 
-            </RadioGroup>
+               <View
+                   android:layout_width="100dp"
+                   android:layout_height="2dp"
+                   android:layout_marginHorizontal="16dp"
+                   android:layout_marginTop="5dp"
+                   android:background="#FFFFFF"
+                   android:elevation="4dp" />
 
-            <Button
-                android:id="@+id/btn_salvar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/bg_btn"
-                android:fontFamily="@font/open_sans_semibold"
-                android:text="Salvar"
-                android:textColor="@color/color_default"
-                android:textSize="20sp"
-                app:backgroundTint="@null" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:paddingTop="10dp"
+                   android:text="Data:"
+                   android:textColor="@color/white"
+                   android:textSize="16sp" />
 
-            <ProgressBar
-                android:id="@+id/progress_circular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-                android:indeterminateTint="@color/white"
-                android:visibility="visible"/>
+               <DatePicker
+                   android:id="@+id/dataPicker"
+                   android:layout_width="match_parent"
+                   android:layout_height="150dp"
+                   android:animationCache="false"
+                   android:calendarTextColor="@color/white"
+                   android:calendarViewShown="false"
+                   android:datePickerMode="spinner"
+                   android:minDate="01/01/2024" />
 
-        </LinearLayout>
+               <View
+                   android:layout_width="100dp"
+                   android:layout_height="2dp"
+                   android:layout_marginHorizontal="16dp"
+                   android:layout_marginTop="5dp"
+                   android:background="#FFFFFF"
+                   android:elevation="4dp" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/open_sans_semibold"
+                   android:paddingTop="10dp"
+                   android:text="Status Exercício:"
+                   android:textColor="@color/white"
+                   android:textSize="16sp" />
+
+               <RadioGroup
+                   android:id="@+id/radioGroup"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                   <RadioButton
+                       android:id="@+id/rd_Todo"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="10dp"
+                       android:layout_weight="1"
+                       android:checked="true"
+                       android:background="@drawable/radio_button_selector"
+                       android:button="@android:color/transparent"
+                       android:text="@string/status_task_todo"
+                       android:textAlignment="center"
+                       android:textColor="@drawable/radio_text_selector"
+                       android:textSize="20sp" />
+
+                   <RadioButton
+                       android:id="@+id/rd_Doing"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="10dp"
+                       android:layout_weight="1"
+                       android:background="@drawable/radio_button_selector"
+                       android:button="@android:color/transparent"
+                       android:text="@string/status_task_doing"
+                       android:textAlignment="center"
+                       android:textColor="@drawable/radio_text_selector"
+                       android:textSize="20sp" />
+
+                   <RadioButton
+                       android:id="@+id/rd_Done"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/radio_button_selector"
+                       android:button="@android:color/transparent"
+                       android:text="@string/status_task_done"
+                       android:textAlignment="center"
+                       android:textColor="@drawable/radio_text_selector"
+                       android:textSize="20sp" />
+
+               </RadioGroup>
+
+               <Button
+                   android:id="@+id/btn_save"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="16dp"
+                   android:text="@string/text_button_form_task_fragment"
+                   style="@style/ButtomTheme"
+                   app:backgroundTint="@null" />
+
+               <ProgressBar
+                   android:id="@+id/progress_circular"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="10dp"
+                   android:indeterminateTint="@color/white"
+                   android:visibility="visible" />
+
+           </LinearLayout>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </LinearLayout>
 
 </ScrollView>

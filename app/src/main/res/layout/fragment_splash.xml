@@ -30,7 +30,7 @@
             android:padding="10dp"
             android:text="@string/Name_app"
             android:textColor="#FFFFFF"
-            android:textSize="22sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 

@@ -7,4 +7,11 @@
     <!-- Adicione suas cores padrão do aplicativo aqui -->
     <color name="cor_primaria">#FFFFFFFF</color>
     <color name="checkbox_text_color">#FFFFFFFF</color>
+
+    <color name="color_delete">#FF4C3B</color>
+    <color name="color_details">#0dd5c1</color>
+    <color name="color_edit">#019507</color>
+
+    <color name="color_status_todo">#FF841A</color>
+    <color name="color_status_done">#0dd5c1</color>
 </resources>

@@ -12,9 +12,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@color/color_default">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="4dp"
+                app:navigationIcon="@drawable/ic_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Recuperar conta"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:textSize="16dp"
+                    android:textColor="@color/white" />
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -31,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:textSize="16dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="@string/txt_recuperar_senha"
                 android:layout_marginBottom="24dp"
@@ -38,32 +58,29 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans_semibold"
                 android:text="@string/txt_email"
                 android:textColor="@color/white" />
 
             <EditText
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/bg_edit_text"
-                android:fontFamily="@font/open_sans_semibold"
-                android:hint="@string/txt_digite_seu_email"
-                android:padding="16dp" />
+                style="@style/EditTextTheme"
+                android:hint="@string/txt_digite_seu_email" />
+
 
             <Button
+                android:id="@+id/btnEnviar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_btn"
-                android:fontFamily="@font/open_sans_semibold"
+                style="@style/ButtomTheme"
                 android:text="@string/txt_recuperar_conta"
-                android:textColor="@color/color_default"
-                android:textSize="20sp"
-                android:textAllCaps="true"
                 app:backgroundTint="@null" />
-
 
             <ProgressBar
                 android:id="@+id/progress_circular"
@@ -72,6 +89,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
+                android:indeterminateTint="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_gravity="center"
                 android:indeterminateTint="@color/white" />
         </LinearLayout>
     </LinearLayout>

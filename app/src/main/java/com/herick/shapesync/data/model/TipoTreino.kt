@@ -1,6 +1,6 @@
-package com.herick.shapesync.model
+package com.herick.shapesync.data.model
 
-enum class TipoDeTreino(val descricao: String) {
+enum class TipoTreino(val descricao: String) {
     TREINAMENTO_DE_FORCA("Treinamento de Força"),
     MUSCULACAO("Musculação"),
     TREINAMENTO_FUNCIONAL("Treinamento Funcional"),

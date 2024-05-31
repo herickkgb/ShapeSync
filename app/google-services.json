@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "382404587253",
+    "project_id": "shapesync-2d254",
+    "storage_bucket": "shapesync-2d254.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382404587253:android:9dad952fd05454fbfc5fbc",
+        "android_client_info": {
+          "package_name": "com.herick.shapesync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1IBcD4MYPKwXc4lBqpM7dtbCu8I6TY3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
