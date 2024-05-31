@@ -16,7 +16,6 @@ import com.herick.shapesync.data.model.Status
 import com.herick.shapesync.data.model.Treino
 import com.herick.shapesync.databinding.FragmentTodoBinding
 import com.herick.shapesync.ui.adapter.TaskTreinoAdapter
-import com.herick.shapesync.FragmentHomeBind
 
 
 class TodoFragment : Fragment() {
