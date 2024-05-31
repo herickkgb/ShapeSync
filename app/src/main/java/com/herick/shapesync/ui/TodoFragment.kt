@@ -16,6 +16,8 @@ import com.herick.shapesync.data.model.Status
 import com.herick.shapesync.data.model.Treino
 import com.herick.shapesync.databinding.FragmentTodoBinding
 import com.herick.shapesync.ui.adapter.TaskTreinoAdapter
+import com.herick.shapesync.FragmentHomeBind
+
 
 class TodoFragment : Fragment() {
     private var _binding: FragmentTodoBinding? = null
@@ -43,7 +45,7 @@ class TodoFragment : Fragment() {
 
     private fun initListener() {
        binding.fadAdd.setOnClickListener {
-           findNavController().navigate(R.id.action_todoFragment_to_formFragment2)
+           findNavController().navigate(R.id.action_homeFragment_to_formFragment2)
        }
       //  observeViewModel()
     }
